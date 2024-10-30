@@ -27,9 +27,9 @@ function generateHTML(data) {
                     </div>
                 </div>
                 <div class="item-card-back">
-                <p><b>Ingredients:</b></p>
+                <p class = "ingredients"><b>Ingredients:</b></p>
                     ${getIngredients(data.drinks[i])}
-                    <p><b>Recipe:</b></p>
+                    <p class = "recipe"><b>Recipe:</b></p>
                     <p>${data.drinks[i].strInstructions}</p>
                 </div>
             </div>
