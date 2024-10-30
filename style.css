@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 * {
     box-sizing: border-box;
 }
@@ -8,6 +10,10 @@ body {
     background-color: #f0f0f0;
 }
 
+main {
+    margin: 0 150px;
+}
+
 h4 {
     color: #A4605A;
 }
@@ -15,7 +21,7 @@ h4 {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 150px;
+    margin-top: 30px;
 }
 
 .base-container {
@@ -68,12 +74,12 @@ h4 {
 }
 
 h1 {
-    padding: 20px 150px 5px 150px;
+    padding: 20px 150px 5px 10px;
     margin: 20px 0 0 0;
 }
 
 h5 {
-    padding: 0 0 0 200px;
+    padding: 0 0 0 60px;
     margin: 0 0 20px 0;
 
 }
@@ -81,4 +87,73 @@ h5 {
 img {
     width: 100%;
     border-radius: 5px 5px 0 0;
+}
+
+.search {
+    width: 300px;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid rgb(43, 43, 43);
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid rgb(43, 43, 43);
+    background: rgb(43, 43, 43);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.searchButton:hover {
+    color: #A4605A;
+}
+
+.wrap {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-top: 50px;
+    padding-right: 80px;
+    gap: 10px;
+}
+
+select {
+    border: 3px solid rgb(43, 43, 43);
+    border-radius: 5px;
+    height: 36px;
+    width: 200px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.randomDrink-btn {
+    border: none;
+    border-radius: 5px;
+    height: 36px;
+    width: 200px;
+    background-color: rgb(43, 43, 43);
+    color: #f0f0f0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.randomDrink-btn:hover {
+    background-color: #A4605A;
 }

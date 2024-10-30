@@ -38,3 +38,13 @@ function generateHTML(data) {
     }
     baseContainer.innerHTML = html;
 }
+
+
+// function generateCategorySelection (data) {
+//     let categoryContainer = document.querySelector(".drinkSelection");
+//     let htmlSelection = '';
+//     for (let i = 0; i < data.drinks.length; i++) {
+//         html += `<option value="${data.drinks[i]}">${data.drinks[i].strCategory}</option>`;
+//     }
+//     categoryContainer.innerHTML = htmlSelection;
+// }
