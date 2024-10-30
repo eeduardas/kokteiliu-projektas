@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/modal.css">
 </head>
 
 <body>
@@ -53,11 +54,29 @@
         </div>
     </main>
 
-    <script src="https://kit.fontawesome.com/ecc4adc2aa.js" crossorigin="anonymous"></script>
-    <script src="htmlGeneration.js"></script>
-    <script src="api.js"></script>
-    <script src="index.js"></script>
-    <script src="random.js"></script>
+    <!-- Modalinis langas -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modalRecipeContent">
+                <div class="modal-card">
+                    <img src="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg" alt="">
+                    <div class="modal-card-descr">
+                        <h4><b>Title1</b></h4>
+                        <p>Description</p>
+                        <p>Ingredients</p>
+                        <p>Recipe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/ecc4adc2aa.js" crossorigin="anonymous"></script>
+        <script src="/modal.js"></script>
+        <script src="/htmlGeneration.js"></script>
+        <script src="random.js"></script>
+        <script src="api.js"></script>
+        <script src="index.js"></script>
 </body>
 
 </html>

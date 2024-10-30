@@ -7,7 +7,9 @@ async function fetchCocktailsInOrder() {
                 show(data);
         show(data.drinks ? data.drinks[0].strDrinkThumb : "No image available");
         generateHTML(data);
-        generateCategorySelection (data);
+        getRandom(data);
+        show(getRandom(data));
+        
     }
 }
 
