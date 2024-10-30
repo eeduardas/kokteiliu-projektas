@@ -70,6 +70,7 @@ h4 {
     transform: rotateY(180deg);
     padding: 20px;
     background-color: rgb(43, 43, 43);
+    overflow: auto;
 }
 
 .container {
