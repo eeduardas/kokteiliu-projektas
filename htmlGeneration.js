@@ -22,7 +22,9 @@ function generateHTML(data) {
                 <div class="item-card">
                     <img src="${data.drinks[i].strDrinkThumb}" alt="">
                     <div class="container">
+                        <div class="drink">
                         <h4><b>${data.drinks[i].strDrink}</b></h4>
+                        </div>
                         <p>${data.drinks[i].strCategory}</p>
                     </div>
                 </div>
