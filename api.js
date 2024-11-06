@@ -14,7 +14,6 @@ async function fetchCocktailsInOrder() {
         }
     }
     return allDrinks;
-    
 }
 
 fetchCocktailsInOrder().then(allDrinks =>{

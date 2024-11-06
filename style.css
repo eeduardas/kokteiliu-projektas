@@ -139,6 +139,7 @@ select {
     border-radius: 5px;
     height: 36px;
     width: 200px;
+    padding: 5px;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
