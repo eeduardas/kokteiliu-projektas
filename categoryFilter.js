@@ -19,7 +19,7 @@ function generateCategoriesHtml(allDrinks) {
     categoryContainer.addEventListener("change", function(event) {
         const selectedCategory = event.target.value;
         if (selectedCategory === "0") {
-            transferDrinks(data.drinks);
+            transferDrinks(allDrinks);
         } else {
             const filteredDrinks = allDrinks.filter(drink => drink.strCategory === selectedCategory);
             transferDrinks(filteredDrinks);

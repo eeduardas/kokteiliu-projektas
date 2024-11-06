@@ -1,4 +1,4 @@
-const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'e', 'f'];
+const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'e', 'f', 'g', 'h', 'i'];
 
 
 async function fetchCocktailsInOrder() {
