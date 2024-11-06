@@ -1,15 +1,28 @@
-const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'e', 'f'];
+
 
 async function fetchCocktailsInOrder() {
+
+    const allDrinks = [];
+
     for (let i = 0; i < abc.length; i++) {
         const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${abc[i]}`);
         const data = await response.json();
-        generateHTML(data);
-        getRandom(data);
+        
+        if (data.drinks) {
+            allDrinks.push(...data.drinks);
+        }
     }
+    return allDrinks;
+    
 }
 
-fetchCocktailsInOrder();
+fetchCocktailsInOrder().then(allDrinks =>{
+    console.log(allDrinks);
+    generateHTML(allDrinks);
+    getRandom(allDrinks);
+    generateCategoriesHtml(allDrinks);
+});
 
 
 

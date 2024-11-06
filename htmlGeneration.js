@@ -13,26 +13,26 @@ function getIngredients(data) {
     return ingredients.join(''); 
 }
 
-function generateHTML(data) {
+function generateHTML(allDrinks) {
     let baseContainer = document.querySelector(".cards-container");
-    for (let i = 0; i < data.drinks.length; i++) {
+    for (let i = 0; i < allDrinks.length; i++) {
         html += `
         <div class="flip-card">
             <div class="base-container">
                 <div class="item-card">
-                    <img src="${data.drinks[i].strDrinkThumb}" alt="">
+                    <img src="${allDrinks[i].strDrinkThumb}" alt="">
                     <div class="container">
                         <div class="drink">
-                        <h4><b>${data.drinks[i].strDrink}</b></h4>
+                        <h4><b>${allDrinks[i].strDrink}</b></h4>
                         </div>
-                        <p>${data.drinks[i].strCategory}</p>
+                        <p>${allDrinks[i].strCategory}</p>
                     </div>
                 </div>
                 <div class="item-card-back">
                 <p class = "ingredients"><b>Ingredients:</b></p>
-                    ${getIngredients(data.drinks[i])}
+                    ${getIngredients(allDrinks[i])}
                     <p class = "recipe"><b>Recipe:</b></p>
-                    <p>${data.drinks[i].strInstructions}</p>
+                    <p>${allDrinks[i].strInstructions}</p>
                 </div>
             </div>
         </div>

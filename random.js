@@ -1,7 +1,7 @@
-function getRandom(data) {
+function getRandom(allDrinks) {
     let baseContainer = document.querySelector(".modal-content");
-        let randomIndex = Math.floor(Math.random() * data.drinks.length);
-        let selectedDrink = data.drinks[randomIndex];
+        let randomIndex = Math.floor(Math.random() * allDrinks.length);
+        let selectedDrink = allDrinks[randomIndex];
         let html =
             `<div class="modalRecipeContent">
                 <div class="modal-card">

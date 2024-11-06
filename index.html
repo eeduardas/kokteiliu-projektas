@@ -19,14 +19,19 @@
             <div class="drinkCategory">
                 <select class="drinkSelection">
                     <option value="0">Select category:</option>
-                    <option value="1"></option>
-                    <option value="2"></option>
-                    <option value="3"></option>
+                    <option value="a">Category A</option>
+                    <option value="b">Category B</option>
+                    <option value="c">Category C</option>
+                    <option value="d">Category D</option>
+                    <option value="e">Category E</option>
+                    <option value="f">Category F</option>
+                    <option value="g">Category G</option>
                 </select>
             </div>
+
             <div class="search">
-                <input type="text" class="searchTerm" placeholder="Search..." >
-                <button type="submit" class="searchButton" onclick="filterCocktails()" >
+                <input type="text" class="searchTerm" placeholder="Search...">
+                <button type="submit" class="searchButton" onclick="filterCocktails()">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
@@ -36,21 +41,7 @@
         </div>
 
         <div class="cards-container">
-            <div class="flip-card">
-                <div class="base-container">
-                    <div class="item-card">
-                        <img src="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg" alt="">
-                        <div class="container">
-                            <h4><b>Title1</b></h4>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                    <div class="item-card-back">
-                        <p>Ingredients</p>
-                        <p>Recipe</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </main>
 
@@ -71,6 +62,7 @@
             </div>
         </div>
         <script src="https://kit.fontawesome.com/ecc4adc2aa.js" crossorigin="anonymous"></script>
+        <script src="/categoryFilter.js"></script>
         <script src="/modal.js"></script>
         <script src="/htmlGeneration.js"></script>
         <script src="random.js"></script>
