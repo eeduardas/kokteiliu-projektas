@@ -16,13 +16,16 @@ async function fetchCocktailsInOrder() {
     return allDrinks;
 }
 
+function updateAll () {
 fetchCocktailsInOrder().then(allDrinks =>{
     console.log(allDrinks);
     generateHTML(allDrinks);
     getRandom(allDrinks);
     generateCategoriesHtml(allDrinks);
 });
+}
 
+updateAll();
 
 
 

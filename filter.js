@@ -15,7 +15,7 @@ async function filterCocktails() {
       baseContainer.innerHTML = `<p>No cocktails found for "${searchValue}".</p>`;
       return;
   } else if (searchValue == ""){
-    fetchCocktailsInOrder();
+    updateAll();
   }
 
   // Generate new HTML for filtered items
