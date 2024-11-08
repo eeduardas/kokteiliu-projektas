@@ -1,18 +1,35 @@
 const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'e', 'f', 'g', 'h', 'i'];
 
 
-async function fetchCocktailsInOrder() {
+// async function fetchCocktailsInOrder() {
 
-    const allDrinks = [];
+//     const allDrinks = [];
 
-    for (let i = 0; i < abc.length; i++) {
-        const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${abc[i]}`);
-        const data = await response.json();
+//     for (let i = 0; i < abc.length; i++) {
+//         const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${abc[i]}`);
+//         const data = await response.json();
         
+//         if (data.drinks) {
+//             allDrinks.push(...data.drinks);
+//         }
+//     }
+//     return allDrinks;
+// }
+
+async function fetchCocktailsInOrder() {
+    const allDrinks = [];
+    const fetchPromises = abc.map(letter =>
+        fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`).then(response => response.json())
+    );
+
+    const results = await Promise.all(fetchPromises);
+
+    results.forEach(data => {
         if (data.drinks) {
             allDrinks.push(...data.drinks);
         }
-    }
+    });
+
     return allDrinks;
 }
 
@@ -30,12 +47,9 @@ updateAll();
 
 
 
-// Prisideti antra fetch is kurio gausime kategorija pagal turimus ID.
-// Tai bus galim atlikti prie linko pabaigos pridejus id su ${}, link - https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
-// Reikia prideti filtravima pagal pavadinima, alkoholio tipa ir kategorija su select
-// Korteles viduje arba jai apsivertus prideti recepta, aprasyma ir ingredientus
-// Kol neuzvedi ant gerimo jis buna pilkas
- 
+// paieska tik ivedus raide, be paspaudimo search
+// banner su menesio gerimu
+// 
     
 
 
