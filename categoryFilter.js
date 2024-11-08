@@ -1,6 +1,6 @@
 function generateCategoriesHtml(allDrinks) {
     let categoryContainer = document.querySelector(".drinkSelection");
-    let htmlSelectCategories = '<option value="0">Select category:</option>';  
+    let htmlSelectCategories = '<option value="0">All drinks</option>';  
 
     let categories = new Set(); 
 
