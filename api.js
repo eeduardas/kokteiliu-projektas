@@ -22,6 +22,7 @@ fetchCocktailsInOrder().then(allDrinks =>{
     generateHTML(allDrinks);
     getRandom(allDrinks);
     generateCategoriesHtml(allDrinks);
+    drinkOfTheMonth(allDrinks);
 });
 }
 

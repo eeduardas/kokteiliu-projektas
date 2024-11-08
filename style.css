@@ -9,12 +9,11 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #f0f0f0;
     display: block;
-    margin: 0 auto;
+    margin: auto;
 }
 
 main {
-    width: 80vw;
-    margin: 0 auto;
+    margin: auto;
 }
 
 h4 {
@@ -25,6 +24,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+
 }
 
 .base-container {
@@ -35,7 +35,6 @@ h4 {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-
 }
 
 .flip-card {
@@ -166,4 +165,56 @@ select {
 .ingredients,
 .recipe {
     color: #A4605A;
+}
+
+.hero {
+    height: fit-content;
+    background-color: rgb(43, 43, 43);
+    padding: 20px;
+    color: #f0f0f0;
+
+    h4 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .drinkOfTheMonthCard {
+        margin-right: auto;
+        margin-left: auto;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .imageBox {
+            height: 100%;
+
+            img {
+                height: 390px;
+                border-radius: 3px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .drinkOfTheMonthDescr {
+            width: 50%;
+            text-align: center;
+        }
+    }
+
+
+}
+
+.mainContainer,
+nav {
+    display: block;
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
 }
