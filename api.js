@@ -16,7 +16,14 @@ const abc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'e', 'f', 'g', 'h', 'i'];
 //     return allDrinks;
 // }
 
+let allCocktailsCache = []; // Global variable to store fetched cocktails
+
 async function fetchCocktailsInOrder() {
+    if (allCocktailsCache.length > 0) {
+        // If data is already cached, return it directly
+        return allCocktailsCache;
+    }
+
     const allDrinks = [];
     const fetchPromises = abc.map(letter =>
         fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`).then(response => response.json())
@@ -30,6 +37,7 @@ async function fetchCocktailsInOrder() {
         }
     });
 
+    allCocktailsCache = allDrinks; // Cache the results
     return allDrinks;
 }
 
