@@ -9,7 +9,9 @@ function getRandom(allDrinks) {
                     <div class="modal-card-descr">
                         <h4><b>${selectedDrink.strDrink}</b></h4>
                         <p><b>${selectedDrink.strCategory}</b></p>
+                        <p><b>Ingredients:</b></p>
                         <p>${getIngredients(selectedDrink)}</p>
+                        <p><b>How to make:</b></p>
                         <p>${selectedDrink.strInstructions}</p>
                     </div>
                 </div>
